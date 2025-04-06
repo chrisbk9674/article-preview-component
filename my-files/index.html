@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Article Preview Component</title>
+  </head>
+  <body>
+    <article class="article-card-wrapper">
+      <section class="article-card">
+        <section class="article-image-wrap">
+          <!-- <img src="images/drawers.jpg" alt="" class="article-image" /> -->
+        </section>
+        <section class="content-wrap">
+          <h2 class="article-title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home.
+          </h2>
+          <p class="article-paragraph">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+
+          <section class="author-date-share">
+            <div class="author-published-date-wrap">
+              <img
+                src="images/avatar-michelle.jpg"
+                alt=""
+                class="author-avatar"
+              />
+              <div class="name-date-wrap">
+                <p class="author-name">Michelle Appleton</p>
+                <time datetime="2020-06-28" class="publish-date"
+                  >28 Jun 2020</time
+                >
+              </div>
+            </div>
+            <button class="share-button" aria-label="Share this article">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
+          </section>
+        </section>
+      </section>
+      <!-- Tooltip content for social media sharing -->
+      <!-- <div class="tooltip-wrapper"> -->
+      <div class="share-tooltip">
+        <div class="tooltip-wrapper">
+          <img src="images/tooltip.svg" alt="Tooltip shape" />
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="images/icon-facebook.svg" alt="Facebook" />
+          </a>
+          <a
+            href="https://twitter.com/intent/tweet?url=your_url"
+            target="_blank"
+          >
+            <img src="images/icon-twitter.svg" alt="Twitter" />
+          </a>
+          <a href="https://www.pinterest.com" target="_blank">
+            <img src="images/icon-pinterest.svg" alt="LinkedIn" />
+          </a>
+        </div>
+        <p>SHARE</p>
+      </div>
+      <!-- </div> -->
+      <!-- </section> -->
+    </article>
+    <script>
+      const shareButton = document.querySelector(".share-button");
+      const tooltip = document.querySelector(".share-tooltip");
+      const socialIcons = document.querySelector(".social-icons");
+      const tooltipText = document.querySelector(".share-tooltip p");
+
+      shareButton.addEventListener("click", () => {
+        // Toggle tooltip visibility
+        tooltip.classList.toggle("show-tooltip");
+
+        // Toggle social icons and text visibility
+        socialIcons.classList.toggle("show-icons");
+        tooltipText.classList.toggle("show-text");
+      });
+
+      shareButton.addEventListener("click", () => {
+        shareButton.classList.toggle("clicked");
+        console.log(
+          "Button clicked state:",
+          shareButton.classList.contains("clicked")
+        );
+      });
+    </script>
+  </body>
+</html>
