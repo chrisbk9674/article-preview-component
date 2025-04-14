@@ -1,4 +1,4 @@
-# 🌟 Article Preview Component – Frontend Mentor Challenge\*\*
+# 🌟 Fully Responsive Article Preview Component\*\*
 
 <p align="center">
   <img src="design/preview.jpg" alt="Blog Preview Card" width="50%">
